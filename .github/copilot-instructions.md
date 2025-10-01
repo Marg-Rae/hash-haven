@@ -1,0 +1,19 @@
+<!-- Use this file to provide workspace-specific custom instructions to Copilot. For more details, visit https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilotinstructionsmd-file -->
+- [x] Verify that the copilot-instructions.md file in the .github directory is created.
+- [x] Clarify Project Requirements - Next.js with TailwindCSS for Hash Haven personal brand website
+- [x] Scaffold the Project - Created Next.js project with TypeScript, TailwindCSS, ESLint, App Router
+- [x] Customize the Project - Built complete Hash Haven website with all required pages and components
+- [x] Install Required Extensions - None required for Next.js
+- [x] Compile the Project - Project compiled successfully, dependencies installed
+- [x] Create and Run Task - Development server running on http://localhost:3000
+- [x] Launch the Project - Website launched and accessible
+- [x] Ensure Documentation is Complete - README.md updated with complete setup instructionshis file to provide workspace-specific custom instructions to Copilot. For more details, visit https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilotinstructionsmd-file -->
+- [x] Verify that the copilot-instructions.md file in the .github directory is created.
+- [x] Clarify Project Requirements - Next.js with TailwindCSS for Hash Haven personal brand website
+- [x] Scaffold the Project - Created Next.js project with TypeScript, TailwindCSS, ESLint, App Router
+- [ ] Customize the Project - Building Hash Haven website components and pages
+- [x] Install Required Extensions - None required for Next.js
+- [ ] Compile the Project
+- [ ] Create and Run Task  
+- [ ] Launch the Project
+- [ ] Ensure Documentation is Complete
