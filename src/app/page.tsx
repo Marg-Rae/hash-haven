@@ -5,26 +5,26 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-800 dark:to-indigo-800 text-white py-32 px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-r from-pink-600 to-rose-600 dark:from-pink-800 dark:to-rose-800 text-white py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Welcome to <span className="text-yellow-300">Hash Haven</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Empowering mothers through resilience, wellness, and practical wisdom. 
-            Join me on a journey of motherhood, property management, and personal growth.
+            Premium Airbnb properties with exceptional local services. 
+            From luxury stays to private chefs, safari tours, and everything in between.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/about"
-              className="inline-flex items-center px-8 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center px-8 py-3 bg-white text-pink-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
             >
               Learn My Story
               <ArrowRightIcon className="ml-2 h-5 w-5" />
             </Link>
             <Link
               href="/blog"
-              className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-colors"
+              className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-pink-600 transition-colors"
             >
               Read Blog
             </Link>
@@ -37,68 +37,68 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              What You&apos;ll Find Here
+              What We Offer
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              A space dedicated to sharing authentic experiences and practical resources for modern mothers.
+              Premium Airbnb accommodations and comprehensive local services to make your stay unforgettable.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Feature 1 */}
             <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
-              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-white text-xl">📝</span>
+              <div className="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-white text-xl">🏠</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                Personal Blog
+                Premium Airbnb Properties
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Raw, honest stories about widowhood, motherhood, and rebuilding life with purpose.
+                Luxury accommodations, family-friendly homes, and unique stays with top-rated hospitality and amenities.
               </p>
               <Link 
-                href="/blog" 
-                className="text-purple-600 dark:text-purple-400 font-medium hover:underline"
+                href="/properties" 
+                className="text-pink-600 dark:text-pink-400 font-medium hover:underline"
               >
-                Read Articles →
+                View Properties →
               </Link>
             </div>
 
             {/* Feature 2 */}
             <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
-              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-white text-xl">🎥</span>
+              <div className="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-white text-xl">�</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                YouTube Content
+                Local Services
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Video content covering wellness tips, property management insights, and life lessons.
+                Airport transfers, babysitting, errands, private chefs, safari tours, and personalized local experiences.
               </p>
               <Link 
-                href="/youtube" 
-                className="text-purple-600 dark:text-purple-400 font-medium hover:underline"
+                href="/services" 
+                className="text-pink-600 dark:text-pink-400 font-medium hover:underline"
               >
-                Watch Videos →
+                Our Services →
               </Link>
             </div>
 
             {/* Feature 3 */}
             <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
-              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-white text-xl">📱</span>
+              <div className="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-white text-xl">🌍</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                Digital Products
+                Tours & Experiences
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Practical tools including budget trackers, wellness journals, and planning resources.
+                Expert tour guides, safari adventures, cultural experiences, and sightseeing packages tailored to you.
               </p>
               <Link 
-                href="/products" 
-                className="text-purple-600 dark:text-purple-400 font-medium hover:underline"
+                href="/experiences" 
+                className="text-pink-600 dark:text-pink-400 font-medium hover:underline"
               >
-                Explore Products →
+                Book Experience →
               </Link>
             </div>
           </div>
@@ -111,32 +111,32 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                My Journey
+                Your Complete Travel Solution
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                I&apos;m a widow, mother, property manager, and geology graduate navigating life with 
-                resilience and purpose. Through Hash Haven, I share the real experiences of 
-                rebuilding, growing, and thriving after loss.
+                Hash Haven offers premium Airbnb properties combined with exceptional local services. 
+                From luxury accommodations to private chefs, airport transfers, safari tours, and babysitting services, 
+                we ensure your stay is seamless and memorable.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-                Whether you&apos;re looking for wellness inspiration, practical life tips, or just 
-                someone who understands the journey, you&apos;ve found your haven.
+                Whether you need a family-friendly home, executive suite, or unique experience, we provide 
+                personalized hospitality with local expertise and professional service standards.
               </p>
               <Link
                 href="/about"
-                className="inline-flex items-center text-purple-600 dark:text-purple-400 font-semibold hover:underline"
+                className="inline-flex items-center text-pink-600 dark:text-pink-400 font-semibold hover:underline"
               >
                 Read My Full Story
                 <ArrowRightIcon className="ml-2 h-5 w-5" />
               </Link>
             </div>
-            <div className="bg-gradient-to-br from-purple-100 to-indigo-100 dark:from-purple-900 dark:to-indigo-900 rounded-lg p-8 text-center">
+            <div className="bg-gradient-to-br from-pink-100 to-rose-100 dark:from-pink-900 dark:to-rose-900 rounded-lg p-8 text-center">
               <div className="text-6xl mb-4">🌟</div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                Building Resilience
+                Exceptional Hospitality
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Every challenge is an opportunity to grow stronger and create a meaningful impact.
+                Premium accommodations, personalized services, and unforgettable local experiences.
               </p>
             </div>
           </div>
@@ -144,12 +144,12 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-purple-600 dark:bg-purple-800">
+      <section className="py-20 bg-pink-600 dark:bg-pink-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Connect?
           </h2>
-          <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
             Join the Hash Haven community and stay updated with the latest content, 
             resources, and inspiration.
           </p>

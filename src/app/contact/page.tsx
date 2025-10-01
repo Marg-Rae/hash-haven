@@ -68,7 +68,7 @@ export default function Contact() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 placeholder="your.email@example.com"
               />
             </div>
@@ -83,7 +83,7 @@ export default function Contact() {
                 required
                 value={formData.subject}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               >
                 <option value="">Select a topic</option>
                 <option value="general">General Inquiry</option>
@@ -105,14 +105,14 @@ export default function Contact() {
                 rows={6}
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 placeholder="Tell me how I can help you..."
               />
             </div>
 
             <button
               type="submit"
-              className="w-full bg-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+              className="w-full bg-pink-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-pink-700 transition-colors"
             >
               Send Message
             </button>
@@ -128,10 +128,10 @@ export default function Contact() {
               <div>
                 <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Social Media</h3>
                 <div className="flex space-x-4">
-                  <a href="#" className="text-purple-600 dark:text-purple-400 hover:underline">YouTube</a>
-                  <a href="#" className="text-purple-600 dark:text-purple-400 hover:underline">Instagram</a>
-                  <a href="#" className="text-purple-600 dark:text-purple-400 hover:underline">TikTok</a>
-                  <a href="#" className="text-purple-600 dark:text-purple-400 hover:underline">LinkedIn</a>
+                  <a href="#" className="text-pink-600 dark:text-pink-400 hover:underline">YouTube</a>
+                  <a href="https://www.instagram.com/hash_haven09?igsh=MTJlNGlmMXZyenM4eQ==" target="_blank" rel="noopener noreferrer" className="text-pink-600 dark:text-pink-400 hover:underline">Instagram</a>
+                  <a href="https://www.tiktok.com/@hash_haven?_t=ZM-90AwkMFbA5c&_r=1" target="_blank" rel="noopener noreferrer" className="text-pink-600 dark:text-pink-400 hover:underline">TikTok</a>
+                  <a href="https://www.facebook.com/share/14M8mwQ9Vu7/" target="_blank" rel="noopener noreferrer" className="text-pink-600 dark:text-pink-400 hover:underline">Facebook</a>
                 </div>
               </div>
 
@@ -154,12 +154,12 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg p-8 text-white text-center">
+          <div className="bg-gradient-to-r from-pink-600 to-rose-600 rounded-lg p-8 text-white text-center">
             <h3 className="text-xl font-semibold mb-4">Join the Community</h3>
             <p className="mb-4">
               Stay updated with the latest content and resources by following Hash Haven on social media.
             </p>
-            <button className="bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-pink-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Follow Now
             </button>
           </div>

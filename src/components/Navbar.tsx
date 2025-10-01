@@ -16,10 +16,10 @@ export default function Navbar() {
 
   const navigation = [
     { name: 'Home', href: '/' },
+    { name: 'Properties', href: '/properties' },
+    { name: 'Services', href: '/services' },
     { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
-    { name: 'YouTube', href: '/youtube' },
-    { name: 'Products', href: '/products' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -29,7 +29,7 @@ export default function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+              <span className="text-2xl font-bold text-pink-600 dark:text-pink-400">
                 Hash Haven
               </span>
             </Link>
@@ -41,7 +41,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-600 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 px-3 py-2 text-sm font-medium transition-colors"
               >
                 {item.name}
               </Link>
@@ -51,7 +51,7 @@ export default function Navbar() {
             {mounted && (
               <button
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
+                className="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400"
               >
                 {theme === 'dark' ? (
                   <SunIcon className="h-5 w-5" />
@@ -97,7 +97,7 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 text-sm font-medium"
+                  className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 text-sm font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

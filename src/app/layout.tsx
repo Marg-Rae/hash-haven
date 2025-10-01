@@ -16,20 +16,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hash Haven | Empowering Mothers Through Resilience & Wellness",
-  description: "Personal brand website of Hash Haven - sharing stories of motherhood, property management, wellness, and resilience. Digital products and resources for empowered living.",
-  keywords: "motherhood, wellness, resilience, property management, digital products, personal brand",
+  title: "Hash Haven | Lifestyle, Wellness, Beauty & Home Living Blog",
+  description: "Discover trending lifestyle tips, wellness routines, beauty secrets, home organization, healthy recipes, and modern living inspiration at Hash Haven.",
+  keywords: "lifestyle blog, wellness tips, beauty secrets, home organization, healthy recipes, skincare routine, home decor, baby care, fitness tips, meal prep, modern living",
   authors: [{ name: "Hash Haven" }],
   openGraph: {
-    title: "Hash Haven | Empowering Mothers Through Resilience & Wellness",
-    description: "Personal brand website sharing stories of motherhood, wellness, and resilience.",
+    title: "Hash Haven | Lifestyle, Wellness, Beauty & Home Living Blog",
+    description: "Your go-to source for trending lifestyle content including wellness, beauty, home living, and modern family life.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hash Haven | Empowering Mothers Through Resilience & Wellness",
-    description: "Personal brand website sharing stories of motherhood, wellness, and resilience.",
+    title: "Hash Haven | Lifestyle, Wellness, Beauty & Home Living Blog",
+    description: "Trending lifestyle tips, wellness routines, beauty secrets, and home living inspiration.",
   },
 };
 
