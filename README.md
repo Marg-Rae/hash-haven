@@ -1,25 +1,27 @@
 # Hash Haven
 
-A responsive personal brand website built with Next.js and TailwindCSS, showcasing authentic stories of motherhood, resilience, and wellness.
+A responsive personal brand website built with Next.js and TailwindCSS, showcasing authentic stories of motherhood, resilience, and wellness with integrated booking and payment services.
 
 ## Features
 
 - **Responsive Design**: Mobile-first approach ensuring optimal experience across all devices
 - **Dark/Light Mode**: Theme toggle for user preference
-- **Blog System**: Markdown-friendly blog for sharing personal stories and insights
-- **YouTube Integration**: Dedicated section for video content
-- **Digital Products**: Showcase for budget trackers, journals, and planning resources
-- **Contact Form**: Interactive contact form for community engagement
+- **WordPress Integration**: Content management system with REST API integration
+- **Payment Processing**: PayPal and M-Pesa payment integration for service bookings
+- **Email Notifications**: SendGrid integration for contact forms and booking confirmations
+- **Service Booking**: Airbnb property marketing and additional services
+- **Blog System**: WordPress-powered blog with fallback content
+- **Contact Form**: Interactive contact form with email notifications
 - **SEO Optimized**: Meta tags, sitemap, and robots.txt for search engine optimization
-- **Social Sharing**: Integration with social media platforms
 
 ## Tech Stack
 
-- **Framework**: Next.js 15 with App Router
-- **Styling**: TailwindCSS
-- **Language**: TypeScript
-- **Icons**: Heroicons
-- **Theme**: next-themes for dark mode support
+- **Frontend**: Next.js 15 with App Router, TypeScript, TailwindCSS
+- **Backend**: WordPress CMS with REST API
+- **Payment Processing**: PayPal API, M-Pesa (Safaricom Daraja API)
+- **Email Service**: SendGrid API
+- **Deployment**: Vercel (Frontend), Hostinger (WordPress Backend)
+- **Domain**: hashhavenltd.com
 
 ## Getting Started
 
@@ -60,30 +62,75 @@ bun dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
+## Environment Configuration
+
+Create a `.env.local` file in the root directory with the following variables:
+
+```bash
+# PayPal Configuration
+PAYPAL_CLIENT_ID=your_paypal_client_id_here
+PAYPAL_CLIENT_SECRET=your_paypal_client_secret_here
+
+# M-Pesa Configuration (Safaricom Daraja API)
+MPESA_CONSUMER_KEY=your_mpesa_consumer_key_here
+MPESA_CONSUMER_SECRET=your_mpesa_consumer_secret_here
+MPESA_SHORTCODE=your_business_shortcode_here
+MPESA_PASSKEY=your_mpesa_passkey_here
+
+# Email Configuration
+SENDGRID_API_KEY=your_sendgrid_api_key_here
+SENDGRID_FROM_EMAIL=your_email@domain.com
+SENDGRID_TO_EMAIL=your_team_email@domain.com
+
+# Application Configuration
+NEXT_PUBLIC_BASE_URL=https://your-domain.com
+```
+
+See `.env.example` for detailed setup instructions.
+
 ## Project Structure
 
 ```
 src/
 ├── app/
+│   ├── api/
+│   │   ├── contact/
+│   │   │   └── route.ts      # Contact form API with email notifications
+│   │   └── payment/
+│   │       ├── route.ts      # PayPal and M-Pesa payment processing
+│   │       └── mpesa-callback/
+│   │           └── route.ts  # M-Pesa payment callback handler
 │   ├── about/
 │   │   └── page.tsx          # About page
 │   ├── blog/
-│   │   └── page.tsx          # Blog listing page
+│   │   └── page.tsx          # WordPress-powered blog
 │   ├── contact/
 │   │   └── page.tsx          # Contact form page
-│   ├── products/
-│   │   └── page.tsx          # Digital products page
-│   ├── youtube/
-│   │   └── page.tsx          # YouTube content page
+│   ├── payment/
+│   │   ├── success/
+│   │   │   └── page.tsx      # Payment success page
+│   │   └── cancel/
+│   │       └── page.tsx      # Payment cancellation page
+│   ├── properties/
+│   │   └── page.tsx          # Airbnb properties showcase
+│   ├── services/
+│   │   └── page.tsx          # Service offerings page
 │   ├── globals.css           # Global styles
 │   ├── layout.tsx            # Root layout with navigation
 │   ├── page.tsx              # Home page
 │   ├── robots.ts             # SEO robots configuration
 │   └── sitemap.ts            # SEO sitemap generation
-└── components/
-    ├── Footer.tsx            # Site footer component
-    ├── Navbar.tsx            # Navigation component
-    └── Providers.tsx         # Theme provider wrapper
+├── components/
+│   ├── BlogGrid.tsx          # Blog post grid component
+│   ├── BlogLayout.tsx        # Blog layout wrapper
+│   ├── Footer.tsx            # Site footer component
+│   ├── Navbar.tsx            # Navigation component
+│   ├── Providers.tsx         # Theme provider wrapper
+│   └── WordPressStatus.tsx   # WordPress connection status
+├── lib/
+│   └── wordpress.ts          # WordPress API utilities
+└── services/
+    └── wordpress.ts          # WordPress service layer
 ```
 
 ## Deployment on Vercel
