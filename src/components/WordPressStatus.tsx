@@ -12,7 +12,7 @@ export default function WordPressStatus() {
       try {
         const status = await WordPressService.healthCheck();
         setIsConnected(status);
-      } catch (error) {
+      } catch {
         setIsConnected(false);
       } finally {
         setIsLoading(false);

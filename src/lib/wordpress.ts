@@ -1,5 +1,8 @@
-// WordPress API configuration
-export const WORDPRESS_API_URL = 'https://hashhavenltd.com/wp-json/wp/v2';
+// WordPress API configuration for hashhavenltd.com backend
+const WORDPRESS_API_URL = process.env.WORDPRESS_API_URL || 'https://hashhavenltd.com/wp-json/wp/v2';
+const WORDPRESS_URL = process.env.NEXT_PUBLIC_WORDPRESS_URL || 'https://hashhavenltd.com';
+
+export { WORDPRESS_API_URL, WORDPRESS_URL };
 
 export interface WordPressPost {
   id: number;

@@ -1,10 +1,13 @@
 import axios from 'axios';
-import { WORDPRESS_API_URL, WordPressPost, WordPressMedia } from './wordpress';
+import { WORDPRESS_API_URL, WordPressPost, WordPressMedia } from '../lib/wordpress';
 
-// Create axios instance with default config
+// Create axios instance with WordPress backend URL
 const api = axios.create({
   baseURL: WORDPRESS_API_URL,
   timeout: 10000,
+  headers: {
+    'Content-Type': 'application/json',
+  },
 });
 
 export class WordPressService {
@@ -101,7 +104,7 @@ export class WordPressService {
         },
       });
       return response.status === 200;
-    } catch (error) {
+    } catch {
       console.log('WordPress API not ready yet - this is normal during setup');
       return false;
     }
@@ -112,7 +115,7 @@ export class WordPressService {
     try {
       const response = await api.get('/');
       return response.status === 200 && response.data?.name;
-    } catch (error) {
+    } catch {
       console.log('WordPress installation check failed - setup may be in progress');
       return false;
     }

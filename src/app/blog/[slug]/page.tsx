@@ -2,6 +2,80 @@ import { notFound } from 'next/navigation';
 import { WordPressService } from '@/services/wordpress';
 import { calculateReadTime } from '@/lib/wordpress';
 
+// Fallback blog post for when WordPress is not available
+const fallbackPost = {
+  title: 'Welcome to Hash Haven Blog',
+  content: `
+    <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">Welcome to Hash Haven's travel and hospitality blog! We're integrating with our WordPress backend to bring you the latest insights.</p>
+    
+    <div class="bg-pink-50 dark:bg-pink-900/20 p-6 rounded-lg my-8">
+      <h3 class="text-pink-600 dark:text-pink-400 font-semibold mb-2 text-lg">WordPress Integration</h3>
+      <p class="mb-4">Our content management system is being configured. Soon you'll see dynamic content from our WordPress backend.</p>
+      <a href="/blog" class="bg-pink-600 text-white px-6 py-3 rounded-md hover:bg-pink-700 inline-block font-medium">Back to Blog</a>
+    </div>
+  `,
+  date: '2024-10-01',
+  readTime: '2 min read'
+};
+
+async function getPost(slug: string) {
+  try {
+    // Try to fetch from WordPress backend
+    const wpPost = await WordPressService.getPostBySlug(slug);
+    
+    if (wpPost) {
+      return {
+        title: wpPost.title.rendered,
+        content: wpPost.content.rendered,
+        date: new Date(wpPost.date).toISOString().split('T')[0],
+        readTime: calculateReadTime(wpPost.content.rendered)
+      };
+    }
+    
+    // Return fallback if WordPress doesn't have the content
+    return fallbackPost;
+  } catch (error) {
+    console.error('Error fetching from WordPress backend:', error);
+    return fallbackPost;
+  }
+}
+
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = await getPost(slug);
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-16">
+      <article className="prose prose-lg dark:prose-invert max-w-none">
+        <header className="mb-8">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            {post.title}
+          </h1>
+          <div className="flex items-center text-gray-600 dark:text-gray-400 space-x-4">
+            <time dateTime={post.date}>{new Date(post.date).toLocaleDateString()}</time>
+            <span>•</span>
+            <span>{post.readTime}</span>
+          </div>
+        </header>
+        
+        <div 
+          className="prose prose-lg dark:prose-invert max-w-none"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
+      </article>
+      
+      <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <a 
+          href="/blog" 
+          className="text-pink-600 dark:text-pink-400 hover:underline"
+        >
+          ← Back to Blog
+        </a>
+      </div>
+    </div>
+  );
+}
+
 // Fallback blog post data for development/backup
 const fallbackBlogPosts = {
   'ultimate-guide-airport-transfers': {
