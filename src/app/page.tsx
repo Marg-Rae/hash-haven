@@ -37,7 +37,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              What You'll Find Here
+              What You&apos;ll Find Here
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               A space dedicated to sharing authentic experiences and practical resources for modern mothers.
@@ -114,13 +114,13 @@ export default function Home() {
                 My Journey
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                I'm a widow, mother, property manager, and geology graduate navigating life with 
+                I&apos;m a widow, mother, property manager, and geology graduate navigating life with 
                 resilience and purpose. Through Hash Haven, I share the real experiences of 
                 rebuilding, growing, and thriving after loss.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-                Whether you're looking for wellness inspiration, practical life tips, or just 
-                someone who understands the journey, you've found your haven.
+                Whether you&apos;re looking for wellness inspiration, practical life tips, or just 
+                someone who understands the journey, you&apos;ve found your haven.
               </p>
               <Link
                 href="/about"
